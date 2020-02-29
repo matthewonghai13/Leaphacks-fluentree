@@ -1,3 +1,15 @@
 .nav {
-    background-color: rgb(113, 190, 100);
+    background-color: #D3E8C2;
 }
+
+.navbar {
+    height: 50px !important;
+    color: #3E3F3F;
+    padding: 5px;
+}
+
+/* #user-img {
+    padding-right: -100px !important;
+} */
+
+

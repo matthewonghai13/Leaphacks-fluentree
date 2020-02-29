@@ -1,10 +1,10 @@
 .body-div {
-        height: 1080px;
+        height: 1050px;
 }
 
 .Login-page {
         background-color: #ffffff;
-        height: 1080px;
+        height: 1050px;
 }
 
 #intro {
@@ -17,6 +17,7 @@
         margin-top: 70px;
         padding: 20px;
         animation: fadeIn 1s 2.5s forwards;
+        background-color: #659B5E !important;
 }
 
 .scale-down-top {
