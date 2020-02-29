@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // login page for webapp
 
-function App() {
+function Review() {
   return (
       <p>cards</p>
   );
