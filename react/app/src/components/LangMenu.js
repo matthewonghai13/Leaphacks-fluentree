@@ -100,6 +100,7 @@ function Splash() {
   );
 }
 
+// sets global language variables for submission
 function selectLanguage(langToSelect) { 
   switch(langToSelect) {
     case "spanish":
@@ -111,10 +112,13 @@ function selectLanguage(langToSelect) {
     case "japanese":
       !japanese ? japanese = true : japanese = false;
       break;
+    default:
+      break;
   }
   alert("" + spanish + french + japanese);
 }
 
+// sets global study reason variables for submission
 function selectCardType(cardToSelect) { 
   switch(cardToSelect) {
     case "work":
@@ -125,6 +129,8 @@ function selectCardType(cardToSelect) {
       break;
     case "culture":
       !culture ? culture = true : culture = false;
+      break;
+    default:
       break;
   }
   alert("" + work + travel + culture);
