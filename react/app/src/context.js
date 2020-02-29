@@ -140,6 +140,26 @@ export default class CardProvider extends Component {
         return cards.length;
     }
 
+    incrementEasy = (index) => {
+        tempCards = this.state.cards;
+        tempCards[index].easyCount = tempCards[index].easyCount + 1;
+        this.setState(() => {
+            return {
+                cards: tempCards
+            }
+        })
+    }
+
+    incrementHard = (index) => {
+        tempCards = this.state.cards;
+        tempCards[index].easyCount = tempCards[index].hardCount + 1;
+        this.setState(() => {
+            return {
+                cards: tempCards
+            }
+        })
+    }
+
     render() {
         return (
             <CardContext.Provider value={{
