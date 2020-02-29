@@ -1,4 +1,4 @@
-.body {
+.body-div {
     height: 1080px;
 }
 
@@ -7,8 +7,9 @@
     height: 1080px;
 }
 
-#logo {
+/*#logo {
+    margin-right: 40px;
     text-align: center;
     height: 700px;
-}
+}*/
 

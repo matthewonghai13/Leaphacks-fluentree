@@ -3,7 +3,7 @@ import '../stylesheets/Login.css';
 
 // import svg bg, logo
 import svgBg from '../SVGFiles/login_bg.svg';
-// import svgTitle from '../SVGFiles/login_title.svg';
+import svgTitle from '../SVGFiles/login_title.svg';
 
 // bootstrap dependencies
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
@@ -15,16 +15,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Login() {
   return (
-    <body>
+    <div id = 'body-div'>
       {/* div for background image */}
       <div className = 'Login' style = {{ backgroundImage: `url(${svgBg})`}}>
 
         {/* logo */}
+        <img src = {svgTitle}></img>
         
         
 
       </div>
-    </body>
+    </div>
+      
+    
     
     
     
