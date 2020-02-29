@@ -30,13 +30,13 @@ class Review extends React.Component {
 
         <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} onClick={this.handleClick}>
           <Card style={{ width: '18rem'}} >
-            <Card body className="text-center" style={{ color: "black"}}>Front of card</Card>
+            <Card body className="text-center">Front of card</Card>
           </Card>
         </a>
 
         <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} onClick={this.handleClick}>
           <Card  style={{ width: '18rem' }}>
-            <Card body  className="text-center" style={{ color: "black"}}>Back of card</Card>
+            <Card body  className="text-center">Back of card</Card>
           </Card>
         </a>
 
