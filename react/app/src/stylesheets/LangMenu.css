@@ -35,6 +35,10 @@ h1 {
 
 }
 
+.green {
+    background-color: green;
+}
+
 .buttonDiv {
     text-align: center;
     justify-content: center;

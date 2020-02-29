@@ -26,8 +26,9 @@ var work = false;
 var travel = false;
 var culture = false;
 
+var spanishClass = "card";
 
-function Splash() {
+function LangMenu() {
   return (
     <body>
 
@@ -37,7 +38,7 @@ function Splash() {
       </div>
 
       <div class="card-deck">
-        <div class="card" onClick={()=>{ selectLanguage('spanish'); }}>
+        <div class={"card "} onClick={()=>{ selectLanguage('spanish'); }}>
           <img src = {spain} class="card-img-top" alt="spain"></img>
           <div class="card-body">
             <h5 class="card-title">Spanish</h5>
@@ -76,7 +77,7 @@ function Splash() {
           <div class="card-body">
             <h5 class="card-title">Work</h5>
             <p class="card-text">Enhance your business trip<br></br>
-            with essential vocabs.</p>
+            with essential vocabulary.</p>
           </div>
         </div>
         <div class="card" onClick={()=>{ selectCardType('travel'); }}>
@@ -98,16 +99,22 @@ function Splash() {
       </div>
       {/* end pick reason */}
       <div className = "buttonDiv">
-        <Link to="/Review"><button type="button" class="btn btn-success">Begin!</button></Link>
+        <Link to="/Review"><button type="button" class="btn btn-success" onClick={()=>{ updateMaster(); }}>Begin!</button></Link>
       </div>
     </body>
   );
 }
 
+function updateMaster() {
+
+}
+
+
 // sets global language variables for submission
 function selectLanguage(langToSelect) { 
   switch(langToSelect) {
     case "spanish":
+      spanishClass += " green";
       !spanish ? spanish = true : spanish = false;
       break;
     case "french":
@@ -119,6 +126,9 @@ function selectLanguage(langToSelect) {
     default:
       break;
   }
+
+  
+
   alert("" + spanish + french + japanese);
 }
 
@@ -140,4 +150,4 @@ function selectCardType(cardToSelect) {
   alert("" + work + travel + culture);
 }
 
-export default Splash;
+export default LangMenu;
