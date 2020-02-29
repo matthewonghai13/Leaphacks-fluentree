@@ -5,9 +5,9 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
-        "timesReviewed": 0,
-        "EF": 2.5,
-        "nextReviewDate": 0
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
     },
     {
         "front": "bus",
@@ -15,9 +15,9 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
-        "timesReviewed": 0,
-        "EF": 2.5,
-        "nextReviewDate": 0
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
     },
     {
         "front": "car",
@@ -25,9 +25,9 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
-        "timesReviewed": 0,
-        "EF": 2.5,
-        "nextReviewDate": 0
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
     },
     {
         "front": "train",
@@ -35,9 +35,9 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
-        "timesReviewed": 0,
-        "EF": 2.5,
-        "nextReviewDate": 0
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
     },
     {
         "front": "hotel",
@@ -45,8 +45,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
-        "timesReviewed": 0,
-        "EF": 2.5,
-        "nextReviewDate": 0
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
     }
 ]

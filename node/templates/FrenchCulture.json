@@ -1,0 +1,52 @@
+[
+    {
+        "front": "flag",
+        "back": "drapeau",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "map",
+        "back": "carte",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "museum",
+        "back": "musée",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "history",
+        "back": "histoire",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "literature",
+        "back": "littérature",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    }
+]

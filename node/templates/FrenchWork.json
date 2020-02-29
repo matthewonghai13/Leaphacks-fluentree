@@ -5,6 +5,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
@@ -13,6 +15,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
@@ -21,6 +25,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
@@ -29,6 +35,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
@@ -37,6 +45,8 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     }
 ]

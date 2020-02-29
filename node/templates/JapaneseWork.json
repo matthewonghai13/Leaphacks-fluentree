@@ -5,22 +5,28 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
         "front": "company",
-        "back": "会社(かいしゃ)",
+        "back": "会社（かいしゃ）",
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
         "front": "money",
-        "back": "お金(おかね)",
+        "back": "お金（おかね）",
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
@@ -29,14 +35,18 @@
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     },
     {
         "front": "business card",
-        "back": "名刺(めいし)",
+        "back": "名刺（めいし）",
         "easyCount": 0,
         "mediumCount": 0,
         "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
         "nextReviewDate": 0
     }
 ]
