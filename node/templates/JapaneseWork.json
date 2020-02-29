@@ -1,0 +1,42 @@
+[
+    {
+        "front": "report",
+        "back": "リポート",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "company",
+        "back": "会社(かいしゃ)",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "money",
+        "back": "お金(おかね)",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "office",
+        "back": "オフィス",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "business card",
+        "back": "名刺(めいし)",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    }
+]

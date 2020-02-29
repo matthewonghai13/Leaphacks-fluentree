@@ -1,0 +1,42 @@
+[
+    {
+        "front": "report",
+        "back": "reporte",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "company",
+        "back": "empresa",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "money",
+        "back": "dinero",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "office",
+        "back": "oficina",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "business card",
+        "back": "tarjeta de visita",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    }
+]

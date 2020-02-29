@@ -1,0 +1,42 @@
+[
+    {
+        "front": "report",
+        "back": "rapport",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "company",
+        "back": "entreprise",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "money",
+        "back": "argent",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "office",
+        "back": "bureau",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "business card",
+        "back": "carte de visite",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    }
+]
