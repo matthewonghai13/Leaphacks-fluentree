@@ -34,3 +34,7 @@ h1 {
 .card-deck {
     padding-bottom: 3% !important;
 }
+
+.card-outline {
+    border: 5px solid #659B5E !important;
+}

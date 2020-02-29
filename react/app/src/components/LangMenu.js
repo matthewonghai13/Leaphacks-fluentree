@@ -136,4 +136,6 @@ function selectCardType(cardToSelect) {
   alert("" + work + travel + culture);
 }
 
+
+
 export default Splash;
