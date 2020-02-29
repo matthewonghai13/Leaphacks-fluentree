@@ -12,7 +12,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // login page for webapp
-
 function Login() {
   return (
     <div id = 'body-div'>
@@ -20,7 +19,7 @@ function Login() {
       <div className = 'Login' style = {{ backgroundImage: `url(${svgBg})`}}>
 
         {/* logo */}
-        <img src = {svgTitle}></img>
+        <img className = 'scale-down-top' src = {svgTitle} alt = 'logo'></img>
         
         
 
