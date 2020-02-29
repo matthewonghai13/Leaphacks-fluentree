@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 const fs = require('fs');
 const PORT = 3000;
 
@@ -7,6 +8,7 @@ app.get("/", (req, res) => {
     res.send("Hello world 2!");
 });
 
+app.use(bodyParser.json())
 
 app.get("/masterList/:userID/:language", (req, res) => {
     const {userID, language} = req.params;
@@ -65,15 +67,19 @@ app.get("/masterList/:userID/:language", (req, res) => {
 app.post("/masterList/:userID/:language", (req, res) => {
     const {userID, language} = req.params;
     let path = "./templates/userinfo/" + userID + language + ".json";
+    updateDates(req.body);
     if(!fs.existsSync(path)) {
         res.send("File doesn't exist dumbass");
     } else {
-        let toWrite = JSON.parse(req.body);
-        console.log(toWrite);
-        fs.writeFileSync(path, JSON.stringify(toWrite));
+        console.log(req.body);
+        fs.writeFileSync(path, JSON.stringify(req.body));
         res.send("File updated");
     }
 });
+
+function updateDates(wordList) {
+    
+}
 
 
 app.listen(PORT, () => {
