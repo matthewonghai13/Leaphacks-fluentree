@@ -9,6 +9,9 @@ import '../stylesheets/LangMenu.css';
 import spain from '../PNGs/spain.jpg';
 import france from '../PNGs/france.jpg';
 import japan from '../PNGs/japan.jpg';
+import work_img from '../PNGs/work.jpg';
+import travel_img from '../PNGs/travel.jpg';
+import culture_img from '../PNGs/culture.jpg';
 
 
 // login page for webapp
@@ -26,7 +29,7 @@ function Splash() {
   return (
     <body>
 
-      {/* test pick language */}
+      {/* pick language */}
       <div class = "mainDiv">
         <h1>Pick a Language</h1>
       </div>
@@ -36,54 +39,63 @@ function Splash() {
           <img src = {spain} class="card-img-top" alt="spain"></img>
           <div class="card-body">
             <h5 class="card-title">Spanish</h5>
-            <p class="card-text">¡Hola! Me alegra tenerte aquí. <br></br>
+            <p class="card-text">¡Hola! Me alegra tenerte aquí.<br></br>
             Haga clic para continuar su aprendizaje.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
           </div>
         </div>
         <div class="card" onClick={()=>{ selectLanguage('french'); }}>
           <img src = {france} class="card-img-top" alt="france"></img>
           <div class="card-body">
             <h5 class="card-title">French</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <p class="card-text">salut! Heureux de vous avoir ici.<br></br>
+            Cliquez pour continuer votre apprentissage</p>
           </div>
         </div>
         <div class="card" onClick={()=>{ selectLanguage('japanese'); }}>
           <img src = {japan} class="card-img-top" alt="japan"></img>
           <div class="card-body">
             <h5 class="card-title">Japanese</h5>
-            <p class="card-text">¡Hola! Me alegra tenerte aquí.
-            Haga clic para continuar su aprendizaje.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <p class="card-text">こんにちは！ ここにいてよかった。<br></br>
+            クリックして学習を続けます</p>
           </div>
         </div>
       </div>
 
-      {/* end test pick language */}
+      {/* end pick language */}
 
+      {/* pick reason */}
       <div class = "mainDiv">
-        <h1>Why are you studying?</h1>
+        <h1>Why are you Studying?</h1>
       </div>
-      <div class="container langSelect">
-        <div class="row">
-          <div class="col-sm spanish" onClick={()=>{ selectCardType('work'); }}>
-            Work
+
+      <div class="card-deck">
+        <div class="card" onClick={()=>{ selectCardType('work'); }}>
+          <img src = {work_img} class="card-img-top" alt="work"></img>
+          <div class="card-body">
+            <h5 class="card-title">Work</h5>
+            <p class="card-text">Enhance your business trip<br></br>
+            with essential vocabs.</p>
           </div>
-          <div class="col-sm french" onClick={()=>{ selectCardType('travel'); }}>
-            Travel
+        </div>
+        <div class="card" onClick={()=>{ selectCardType('travel'); }}>
+          <img src = {travel_img} class="card-img-top" alt="travel"></img>
+          <div class="card-body">
+            <h5 class="card-title">Travel</h5>
+            <p class="card-text">Travel professionally<br></br>
+            by making the most out of your getaway.</p>
           </div>
-          <div class="col-sm japanese" onClick={()=>{ selectCardType('culture'); }}>
-            Culture
+        </div>
+        <div class="card" onClick={()=>{ selectCardType('culture'); }}>
+          <img src = {culture_img} class="card-img-top" alt="culture"></img>
+          <div class="card-body">
+            <h5 class="card-title">Culture</h5>
+            <p class="card-text">Learn more than just the language.<br></br>
+            Immerse yourself.</p>
           </div>
         </div>
       </div>
+      {/* end pick reason */}
+
     </body>
   );
 }
