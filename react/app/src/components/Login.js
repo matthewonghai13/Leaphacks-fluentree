@@ -21,7 +21,7 @@ function Login() {
         <img className = 'scale-down-top' src = {svgTitle} alt = 'logo'></img>
 
         <h4 id = 'intro' className = 'scale-up-top'>
-          A customizable, smart language learning app<br></br>
+          A customizable, smart language learning service<br></br>
           <Link to="/Menu"><button type="button" class="btn btn-success startButton">Get Started</button></Link>
         </h4>
         

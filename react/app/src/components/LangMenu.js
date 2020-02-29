@@ -13,6 +13,8 @@ import work_img from '../PNGs/work.jpg';
 import travel_img from '../PNGs/travel.jpg';
 import culture_img from '../PNGs/culture.jpg';
 
+import {Link} from "react-router-dom";
+
 
 // login page for webapp
 
@@ -95,7 +97,9 @@ function Splash() {
         </div>
       </div>
       {/* end pick reason */}
-
+      <div className = "buttonDiv">
+        <Link to="/Review"><button type="button" class="btn btn-success">Begin!</button></Link>
+      </div>
     </body>
   );
 }

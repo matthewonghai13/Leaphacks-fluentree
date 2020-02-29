@@ -1,8 +1,11 @@
 import React from 'react';
-import logo from '../logo.svg';
+
 import ReactCardFlip from 'react-card-flip';
 import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+
 import '../App.css';
+import '../stylesheets/Review.css'
 // bootstrap dependencies
 import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -11,35 +14,53 @@ class Review extends React.Component {
   constructor() {
     super();
       this.state = {
-      isFlipped: false
+      isFlipped: false,
+      currentWord: 0
+      // wordArray: this.props.wordArray
     };
     this.handleClick = this.handleClick.bind(this);
+    this.newCard = this.newCard.bind(this);
   }
  
   handleClick(e) {
     e.preventDefault();
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
+  
+  newCard(e) {
+    e.preventDefault();
+    this.setState(prevState => ({ isFlipped: !prevState.isFlipped, currentWord: prevState.currentWord + 1 }));
+  }
   // style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
  
   render() {
     return (
       <ReactCardFlip 
-        isFlipped={this.state.isFlipped} 
-        flipDirection="horizontal">
+        isFlipped={this.state.isFlipped}
+        currentWord = {0}
+        flipDirection="horizontal" >
 
         <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
-          {/* <Card style={{ width: '34rem'marginTop: "10%"}} > */}
-            <Card style={{ color: "black", width: '34rem', height: '20rem', marginTop: '10%'}}>
-              <Card.Body style={{ marginTop: '23%'}}>Front of card</Card.Body>
+            <Card id="wordCard" border="dark">
+              <Card.Body id="wordFront">Japanese Character</Card.Body>
             </Card>
-          {/* </Card> */}
         </a>
 
-        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
-          <Card style={{ color: "black", width: '34rem', height: '20rem', marginTop: '10%'}}>
-              <Card.Body style={{ marginTop: '23%'}}>Back of card</Card.Body>
-            </Card>
+        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <Card id="wordCard" border="dark">
+            <Card.Body id="wordBack">Translation</Card.Body>
+            
+            <ListGroup className="list-group-flush" onClick={this.newCard}>
+              <ListGroup.Item></ListGroup.Item>
+              <ListGroup.Item class="container" style={{ height:"60px", marginBottom: "20px", borderTop: "2px solid #ccc"}}>
+                  <div class="row">
+                    <div class="col" id="EH" style={{borderRight: "2px solid #ccc"}}>Easy</div>
+                    <div class="col" id="EH" >Hard</div>
+                  </div>
+              </ListGroup.Item>
+            </ListGroup>    
+
+          </Card>
         </a>
 
       </ReactCardFlip>
