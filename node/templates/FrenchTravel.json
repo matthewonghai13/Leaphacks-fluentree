@@ -1,0 +1,52 @@
+[
+    {
+        "front": "airport",
+        "back": "aéroport",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "bus",
+        "back": "autobus",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "car",
+        "back": "voiture",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "train",
+        "back": "train",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "hotel",
+        "back": "hôtel",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    }
+]

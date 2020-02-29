@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "userID": "bonghai",
+            "languages": [
+                "JapaneseTravel"
+            ],
+            "pwd": "12345"
+        }
+    ]
+}

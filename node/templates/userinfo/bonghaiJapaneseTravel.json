@@ -1,0 +1,52 @@
+[
+    {
+        "front": "airport",
+        "back": "空港（くうこう）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
+    },
+    {
+        "front": "bus",
+        "back": "バス",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
+    },
+    {
+        "front": "car",
+        "back": "車（くるま）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
+    },
+    {
+        "front": "train",
+        "back": "列車（れっしゃ）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
+    },
+    {
+        "front": "hotel",
+        "back": "ホテル",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 1,
+        "EF": 2.06,
+        "nextReviewDate": 1
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "front": "flag",
+        "back": "フラグ",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "map",
+        "back": "地図（ちず）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "museum",
+        "back": "博物館（はくぶつかん）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "history",
+        "back": "歴史（れきし）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "literature",
+        "back": "文学（ぶんがく）",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "timesReviewed": 0,
+        "EF": 2.5,
+        "nextReviewDate": 0
+    }
+]
