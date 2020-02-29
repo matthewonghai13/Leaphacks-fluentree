@@ -2,9 +2,13 @@
     height: 1080px;
 }
 
-.Login {
+.Login-page {
     background-color: #ffffff;
     height: 1080px;
+}
+
+#intro {
+        text-align: center;
 }
 
 .scale-down-top {
@@ -52,5 +56,8 @@
               transform-origin: 50% 0%;
     }
   }
+
+  /* forms stuff */
+  
   
 
