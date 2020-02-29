@@ -1,0 +1,26 @@
+[
+    {
+        "front": "taco",
+        "back": "sa",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "salsa",
+        "back": "shi",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    },
+    {
+        "front": "chips",
+        "back": "su",
+        "easyCount": 0,
+        "mediumCount": 0,
+        "hardCount": 0,
+        "nextReviewDate": 0
+    }
+]
