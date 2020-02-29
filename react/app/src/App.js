@@ -13,13 +13,11 @@ import Review from "./components/Review";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <Navbar />
         <Router>
           <Route path = {"/Login"} component = {Login}></Route>
           <Route path = {"/Review"} component = {Review}></Route>
         </Router>
-      </header>
     </div>
   );
 }
