@@ -22,9 +22,9 @@ import {Link} from "react-router-dom";
 // var french = false;
 // var japanese = false;
 
-var work = false;
-var travel = false;
-var culture = false;
+// var work = false;
+// var travel = false;
+// var culture = false;
 
 var spanishClass = "card";
 
@@ -39,7 +39,9 @@ class LangMenu extends React.Component {
         travel: false,
         culture: false
     };
+
     this.selectLanguage = this.selectLanguage.bind(this);
+    this.selectCardType = this.selectCardType.bind(this);
   }
   // sets global language variables for submission
   selectLanguage(langToSelect) { 
@@ -69,11 +71,35 @@ class LangMenu extends React.Component {
     // alert("" + this.state.spanish + this.state.french + this.state.japanese);
   }
 
+  
+  // sets global study reason variables for submission
+  selectCardType(cardToSelect) { 
+    switch(cardToSelect) {
+      case "work":
+        this.setState({work: !this.state.work, travel: false, culture: false})
+        break;
+      case "travel":        
+        this.setState({travel: !this.state.travel, work: false, culture: false})
+
+        break;
+      case "culture":        
+        this.setState({culture: !this.state.culture, work: false, travel: false})
+
+        break;
+      default:
+        break;
+    }
+  }
+
   render() {
     
     let spanishClass = this.state.spanish ? "selected card" : "unselected card";
     let frenchClass = this.state.french ? "selected card" : "unselected card";
     let japaneseClass = this.state.japanese ? "selected card" : "unselected card";
+
+    let workClass = this.state.work ? "selected card" : "unselected card";
+    let travelClass = this.state.travel ? "selected card" : "unselected card";
+    let cultureClass = this.state.culture ? "selected card" : "unselected card";
     return (
       <body>
         
@@ -117,7 +143,7 @@ class LangMenu extends React.Component {
         </div>
 
         <div class="card-deck">
-          <div class="card" onClick={()=>{ selectCardType('work'); }}>
+          <div class={workClass} onClick={()=>{ this.selectCardType('work'); }}>
             <img src = {work_img} class="card-img-top" alt="work"></img>
             <div class="card-body">
               <h5 class="card-title">Work</h5>
@@ -125,7 +151,7 @@ class LangMenu extends React.Component {
               with essential vocabulary.</p>
             </div>
           </div>
-          <div class="card" onClick={()=>{ selectCardType('travel'); }}>
+          <div class={travelClass} onClick={()=>{ this.selectCardType('travel'); }}>
             <img src = {travel_img} class="card-img-top" alt="travel"></img>
             <div class="card-body">
               <h5 class="card-title">Travel</h5>
@@ -133,7 +159,7 @@ class LangMenu extends React.Component {
               by making the most out of your getaway.</p>
             </div>
           </div>
-          <div class="card" onClick={()=>{ selectCardType('culture'); }}>
+          <div class={cultureClass} onClick={()=>{ this.selectCardType('culture'); }}>
             <img src = {culture_img} class="card-img-top" alt="culture"></img>
             <div class="card-body">
               <h5 class="card-title">Culture</h5>
@@ -158,22 +184,5 @@ function updateMaster() {
 
 
 
-// sets global study reason variables for submission
-function selectCardType(cardToSelect) { 
-  switch(cardToSelect) {
-    case "work":
-      !work ? work = true : work = false;
-      break;
-    case "travel":
-      !travel ? travel = true : travel = false;
-      break;
-    case "culture":
-      !culture ? culture = true : culture = false;
-      break;
-    default:
-      break;
-  }
-  alert("" + work + travel + culture);
-}
 
 export default LangMenu;
