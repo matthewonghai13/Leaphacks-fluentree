@@ -4,7 +4,7 @@ import ReactCardFlip from 'react-card-flip';
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import {CardConsumer} from "../../context";
+import {CardConsumer} from "./../context";
 import '../App.css';
 import '../stylesheets/Review.css'
 // bootstrap dependencies
@@ -36,10 +36,11 @@ class Review extends React.Component {
  
   render() {
     return (
-      <ProductConsumer>
+      <CardConsumer>
       { value => {
         const {getCard, updateCard, cards} = value;
         const card = getCard(this.state.currentWord);
+        return (
         <ReactCardFlip 
           isFlipped={this.state.isFlipped}
           currentWord = {0}
@@ -55,7 +56,7 @@ class Review extends React.Component {
             <Card id="wordCard" border="dark">
               <Card.Body id="wordBack">{card.back}</Card.Body>
               
-              <ListGroup className="list-group-flush" onClick={() => {updateCard(this.state.currentWord); this.newCard;}}>
+        <ListGroup className="list-group-flush" onClick={() => {{/*updateCard(this.state.currentWord);*/} this.newCard();}}>
                 <ListGroup.Item></ListGroup.Item>
                 <ListGroup.Item class="container" style={{ height:"60px", marginBottom: "20px", borderTop: "2px solid #ccc"}}>
                     <div class="row">
@@ -68,9 +69,9 @@ class Review extends React.Component {
             </Card>
           </a>
 
-        </ReactCardFlip>
+        </ReactCardFlip> )
       }}
-      </ProductConsumer>
+      </CardConsumer>
     )
   }
 }

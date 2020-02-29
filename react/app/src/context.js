@@ -9,6 +9,7 @@ export default class CardProvider extends Component {
         workCards: [],
         travelCards: [],
         cultureCards: [],
+        topics: [],
         currentLanguage: "",
         username : "monghai",
         pwd: "12345"
@@ -29,13 +30,13 @@ export default class CardProvider extends Component {
             
             let toSend = [];
             if(this.state.topics[i] === "Work") {
-                toSend = workCards;
+                toSend = this.state.workCards;
             }
             if(this.state.topics[i] === "Culture") {
-                toSend = cultureCards;
+                toSend = this.state.cultureCards;
             }
             if(this.state.topics[i] === "Travel") {
-                toSend = cultureCards;
+                toSend = this.state.cultureCards;
             }
             axios.post(tempPath, toSend)
                 .then(response => {
@@ -101,7 +102,7 @@ export default class CardProvider extends Component {
         for(let i = 0; i < this.state.topics.length; i++) {
             let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + this.state.language 
                             + this.state.topics[i];
-            axious.get(tempPath)
+            axios.get(tempPath)
                 .then(response => {
                     console.log(response);
                     newCards.concat(response.data);
@@ -132,19 +133,25 @@ export default class CardProvider extends Component {
     }
 
     getCard = (index) => {
-        return cards[index];
+        return this.state.cards[index];
     }
 
     updateCard = (newCard, index) => {
-        cards[index] = newCard;
+        let tempCards = this.state.cards;
+        tempCards[index] = newCard;
+        this.setState(() => {
+            return {
+                cards: tempCards
+            }
+        })
     }
 
     getCardsLength = () => {
-        return cards.length;
+        return this.state.cards.length;
     }
 
     incrementEasy = (index) => {
-        tempCards = this.state.cards;
+        let tempCards = this.state.cards;
         tempCards[index].easyCount = tempCards[index].easyCount + 1;
         this.setState(() => {
             return {
@@ -154,7 +161,7 @@ export default class CardProvider extends Component {
     }
 
     incrementHard = (index) => {
-        tempCards = this.state.cards;
+        let tempCards = this.state.cards;
         tempCards[index].easyCount = tempCards[index].hardCount + 1;
         this.setState(() => {
             return {
