@@ -3,7 +3,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 // bootstrap dependencies
 
-
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbar;

@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import Review from "./components/Review";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Navbar />
         <Router>
           <Route path = {"/Login"} component = {Login}></Route>
-          <Route path = {"/Login"} component = {Login}></Route>
+          <Route path = {"/Review"} component = {Login}></Route>
           {/* <Route path = {"Home"}></Route> */}
         </Router>
       </header>
