@@ -5,12 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 // login page for webapp
 
-function App() {
+function Nav() {
   return (
     <Navbar>
     <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
@@ -24,4 +21,4 @@ function App() {
   );
 }
 
-export default Navbar;
+export default Nav;
