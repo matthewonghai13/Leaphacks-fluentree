@@ -26,18 +26,20 @@ class Review extends React.Component {
     return (
       <ReactCardFlip 
         isFlipped={this.state.isFlipped} 
-        flipDirection="vertical">
+        flipDirection="horizontal">
 
-        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} onClick={this.handleClick}>
-          <Card style={{ width: '18rem'}} >
-            <Card body className="text-center" style={{ color: "black"}}>Front of card</Card>
-          </Card>
+        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
+          {/* <Card style={{ width: '34rem'marginTop: "10%"}} > */}
+            <Card style={{ color: "black", width: '34rem', height: '20rem', marginTop: '10%'}}>
+              <Card.Body style={{ marginTop: '23%'}}>Front of card</Card.Body>
+            </Card>
+          {/* </Card> */}
         </a>
 
-        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} onClick={this.handleClick}>
-          <Card  style={{ width: '18rem' }}>
-            <Card body  className="text-center" style={{ color: "black"}}>Back of card</Card>
-          </Card>
+        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
+          <Card style={{ color: "black", width: '34rem', height: '20rem', marginTop: '10%'}}>
+              <Card.Body style={{ marginTop: '23%'}}>Back of card</Card.Body>
+            </Card>
         </a>
 
       </ReactCardFlip>
