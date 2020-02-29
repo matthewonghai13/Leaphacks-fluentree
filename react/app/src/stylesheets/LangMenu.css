@@ -1,7 +1,11 @@
+h1 {
+    color: #3E3F3F !important;
+}
+
 .mainDiv {
-    padding: 2em;
+    padding: 5%;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .langSelect {
@@ -19,4 +23,10 @@
 
 .japanese {
     background-color: red;
+}
+
+.card-deck {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+
 }
