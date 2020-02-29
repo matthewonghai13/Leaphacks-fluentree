@@ -1,0 +1,59 @@
+h1 {
+    color: #3E3F3F !important;
+}
+
+.mainDiv {
+    padding: 5%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.langSelect {
+    text-align: center;
+    color: white;
+}
+
+.card:onclick {
+    color: green;
+}
+
+.french {
+    background-color: blue;
+}
+
+.spanish {
+    background-color: green;
+}
+
+.japanese {
+    background-color: red;
+}
+
+.card-deck {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+
+}
+
+.green {
+    background-color: green;
+}
+
+.buttonDiv {
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.buttonDiv button {
+    padding: 15px 30px 15px 30px;
+}
+
+.card-deck {
+    padding-bottom: 3% !important;
+}
+
+.selected {
+    box-shadow: 10px 10px 5px lightgrey;
+}
