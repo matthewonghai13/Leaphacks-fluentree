@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const CardContext = React.createContext();
 
-export default class CardContext extends Component {
+export default class CardProvider extends Component {
     state = {
         cards: [],
         workCards: [],
@@ -142,23 +142,24 @@ export default class CardContext extends Component {
 
     render() {
         return (
-            <ProductContext.Provider value={{
+            <CardContext.Provider value={{
                 ...this.state,
-                handleDetail: this.handleDetail,
-                addToCart: this.addToCart,
-                openModal: this.openModal,
-                closeModal: this.closeModal,
-                increment: this.increment,
-                decrement: this.decrement,
-                removeItem: this.removeItem,
-                clearCart: this.clearCart
+                
+                clearCart: this.clearCart,
+                cards: this.cards,
+                workCards: this.workCards,
+                travelCards: this.travelCards,
+                cultureCards: this.cultureCards,
+                currentLanguage: this.currentLanguage,
+                username : this.username,
+                pwd: this.pwd
             }}>
                 {this.props.children}
-            </ProductContext.Provider>
+            </CardContext.Provider>
         )
     }
 }
 
-const ProductConsumer = ProductContext.Consumer;
+const CardConsumer = CardContext.Consumer;
 
-export {ProductProvider, ProductConsumer};
+export {CardProvider, CardConsumer};
