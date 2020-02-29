@@ -16,7 +16,6 @@ function App() {
         <Navbar />
         <Router>
           <Route path = {"/Login"} component = {Login}></Route>
-          <Route path = {"/Login"} component = {Login}></Route>
           {/* <Route path = {"Home"}></Route> */}
         </Router>
       </header>
