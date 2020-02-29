@@ -19,7 +19,7 @@ function Login() {
         {/* logo */}
         <img className = 'scale-down-top' src = {svgTitle} alt = 'logo'></img>
 
-        <p id = 'intro'>A customizable language learning app</p>
+        <h4 id = 'intro' className = 'scale-up-top'>A customizable, smart language learning app</h4>
         
 
       </div>
