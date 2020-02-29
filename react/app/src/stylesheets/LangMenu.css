@@ -54,6 +54,6 @@ h1 {
     padding-bottom: 3% !important;
 }
 
-.card-outline {
-    border: 5px solid #659B5E !important;
+.selected {
+    box-shadow: 10px 10px 5px lightgrey;
 }
