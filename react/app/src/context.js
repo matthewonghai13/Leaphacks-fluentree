@@ -10,7 +10,7 @@ export default class CardProvider extends Component {
         travelCards: [],
         cultureCards: [],
         currentLanguage: "",
-        username : "",
+        username : "monghai",
         pwd: "12345"
     }
 
@@ -94,6 +94,9 @@ export default class CardProvider extends Component {
 
     switchTopics = (newTopics) => {
         let newCards = [];
+        let newWork = [];
+        let newTravel = [];
+        let newCulture = [];
 
         for(let i = 0; i < this.state.topics.length; i++) {
             let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + this.state.language 

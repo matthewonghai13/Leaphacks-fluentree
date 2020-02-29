@@ -4,6 +4,7 @@ import ReactCardFlip from 'react-card-flip';
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
+import {CardConsumer} from "../../context";
 import '../App.css';
 import '../stylesheets/Review.css'
 // bootstrap dependencies
@@ -35,36 +36,41 @@ class Review extends React.Component {
  
   render() {
     return (
-      <ReactCardFlip 
-        isFlipped={this.state.isFlipped}
-        currentWord = {0}
-        flipDirection="horizontal" >
+      <ProductConsumer>
+      { value => {
+        const {getCard, updateCard, cards} = value;
+        const card = getCard(this.state.currentWord);
+        <ReactCardFlip 
+          isFlipped={this.state.isFlipped}
+          currentWord = {0}
+          flipDirection="horizontal" >
 
-        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
+          <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
+              <Card id="wordCard" border="dark">
+                <Card.Body id="wordFront">{card.front}</Card.Body>
+              </Card>
+          </a>
+
+          <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}}>
             <Card id="wordCard" border="dark">
-              <Card.Body id="wordFront">Japanese Character</Card.Body>
+              <Card.Body id="wordBack">{card.back}</Card.Body>
+              
+              <ListGroup className="list-group-flush" onClick={() => {updateCard(this.state.currentWord); this.newCard;}}>
+                <ListGroup.Item></ListGroup.Item>
+                <ListGroup.Item class="container" style={{ height:"60px", marginBottom: "20px", borderTop: "2px solid #ccc"}}>
+                    <div class="row">
+                      <div class="col" id="EH" style={{borderRight: "2px solid #ccc"}}>Easy</div>
+                      <div class="col" id="EH" >Hard</div>
+                    </div>
+                </ListGroup.Item>
+              </ListGroup>    
+
             </Card>
-        </a>
+          </a>
 
-        <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}}>
-          <Card id="wordCard" border="dark">
-            <Card.Body id="wordBack">Translation</Card.Body>
-            
-            <ListGroup className="list-group-flush" onClick={this.newCard}>
-              <ListGroup.Item></ListGroup.Item>
-              <ListGroup.Item class="container" style={{ height:"60px", marginBottom: "20px", borderTop: "2px solid #ccc"}}>
-                  <div class="row">
-                    <div class="col" id="EH" style={{borderRight: "2px solid #ccc"}}>Easy</div>
-                    <div class="col" id="EH" >Hard</div>
-                  </div>
-              </ListGroup.Item>
-            </ListGroup>    
-
-          </Card>
-        </a>
-
-      </ReactCardFlip>
-      
+        </ReactCardFlip>
+      }}
+      </ProductConsumer>
     )
   }
 }
