@@ -16,14 +16,10 @@ function App() {
         <Navbar />
         <Router>
           <Route path = {"/Login"} component = {Login}></Route>
-<<<<<<< HEAD
-          {/* <Route path = {"Home"}></Route> */}
-=======
           <Route path = {"/Review"} component = {Review}></Route>
->>>>>>> 5ee7fd935f757d1ed1225e5f7765a26572f1e56b
         </Router>
     </div>
-  );
+  )
 }
 
 export default App;
