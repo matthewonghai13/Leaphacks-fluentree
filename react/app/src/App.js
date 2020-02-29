@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./components/Login";
 import Navbar from "./components/Nav";
 import Review from "./components/Review";
-import Splash from "./components/Splash";
+import LangMenu from "./components/LangMenu";
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
         <Navbar />
         <Router>
           <Switch>
-            <Route path = {"/Login"} component = {Login}></Route>
+            <Route path = {"/Menu"} component = {LangMenu}></Route>
             <Route path = {"/Review"} component = {Review}></Route>
-            <Route component = {Splash} />
+            <Route component = {Login} />
           </Switch>
         </Router>
         

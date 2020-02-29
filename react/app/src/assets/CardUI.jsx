@@ -1,4 +1,6 @@
 import React from 'react';
+import img1 from '../assets'
+
 
 const Card = props => {
     return(
