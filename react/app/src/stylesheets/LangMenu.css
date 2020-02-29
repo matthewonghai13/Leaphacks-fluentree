@@ -1,0 +1,22 @@
+.mainDiv {
+    padding: 2em;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.langSelect {
+    text-align: center;
+    color: white;
+}
+
+.french {
+    background-color: blue;
+}
+
+.spanish {
+    background-color: green;
+}
+
+.japanese {
+    background-color: red;
+}
