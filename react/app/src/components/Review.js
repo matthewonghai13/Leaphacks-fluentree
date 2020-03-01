@@ -35,7 +35,7 @@ class Review extends React.Component {
  
   render() {
     let eng = ["report", "company", "money", "office", "business card"];
-    let foreign = ["reporte", "empresa", "dinero", "oficina", "tarjeta de visita", "Done! Check back later."];
+    let foreign = ["リポート", "会社（かいしゃ）", "お金（おかね）", "オフィス", "名刺（めいし）", "Done! Check back later."];
 
     
     return (
