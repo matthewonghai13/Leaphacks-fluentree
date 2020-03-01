@@ -6,6 +6,13 @@
                 "JapaneseTravel"
             ],
             "pwd": "12345"
+        },
+        {
+            "userID": "monghai",
+            "languages": [
+                "SpanishTravel"
+            ],
+            "pwd": "12345"
         }
     ]
 }

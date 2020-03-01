@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
 app.use(bodyParser.json())
 
 app.get("/masterList/:userID/:language", (req, res) => {
+    console.log("GET REQUEST");
     const {userID, language} = req.params;
     let rawDataMeta = fs.readFileSync('./templates/MetaInfo.json');
     let jsonDataMeta = JSON.parse(rawDataMeta);

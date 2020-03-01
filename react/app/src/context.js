@@ -10,7 +10,7 @@ export default class CardProvider extends Component {
         travelCards: [],
         cultureCards: [],
         topics: [],
-        currentLanguage: "",
+        currentLanguage: "Spanish",
         username : "monghai",
         pwd: "12345"
     }
@@ -26,7 +26,7 @@ export default class CardProvider extends Component {
     updateCards = () => {
         for(let i = 0; i < this.state.topics.length; i++) {
             let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + this.state.language 
-                            + this.state.topics[i];
+                            + this.state.topics[i] + ".json";
             
             let toSend = [];
             if(this.state.topics[i] === "Work") {
@@ -50,6 +50,9 @@ export default class CardProvider extends Component {
     }
 
     switchLanguage = (newLanguage) => {
+
+        console.log("switch language called" + newLanguage);
+
         // Clear cards array
         // set currentLanguage to newLanguage
         // iterate through topics and call addCards for each one
@@ -57,22 +60,21 @@ export default class CardProvider extends Component {
         let newWork = [];
         let newTravel = [];
         let newCulture = [];
-
         for(let i = 0; i < this.state.topics.length; i++) {
             let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + newLanguage 
-                            + this.state.topics[i];
+                            + this.state.topics[i] + ".json";
             axios.get(tempPath)
                 .then(response => {
                     console.log(response);
                     newCards.concat(response.data);
                     if(this.state.topics[i] === "Work") {
-                        newWork = response.data;
+                        newWork = [...response.data];
                     }
                     if(this.state.topics[i] === "Culture") {
-                        newCulture = response.data;
+                        newCulture = [...response.data];
                     }
                     if(this.state.topics[i] === "Travel") {
-                        newTravel = response.data;
+                        newTravel = [...response.data];
                     }
                 })
                 .catch(error => {
@@ -80,16 +82,16 @@ export default class CardProvider extends Component {
                 });
         }
 
-        this.setState(() => {
-            return {
-                currentLanguage: newLanguage,
-                cards: newCards,
-                workCards: newWork,
-                travelCards: newTravel,
-                cultureCards: newCulture
-            };
-        });
 
+        console.log(newLanguage);
+
+        this.setState({
+                currentLanguage: newLanguage,
+                cards: [...newCards],
+                workCards: [...newWork],
+                travelCards: [...newTravel],
+                cultureCards: [...newCulture]
+        });
 
     }
 
@@ -99,21 +101,26 @@ export default class CardProvider extends Component {
         let newTravel = [];
         let newCulture = [];
 
-        for(let i = 0; i < this.state.topics.length; i++) {
-            let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + this.state.language 
-                            + this.state.topics[i];
+        console.log("switch topics called");
+        console.log(this.state.currentLanguage);
+        console.log(newTopics);
+
+        for(let i = 0; i < newTopics.length; i++) {
+            let tempPath = "http://localhost:9000/masterList/" + this.state.username + "/" + this.state.currentLanguage 
+                            + newTopics[i];
+            console.log(tempPath);
             axios.get(tempPath)
                 .then(response => {
                     console.log(response);
                     newCards.concat(response.data);
                     if(this.state.topics[i] === "Work") {
-                        newWork = response.data;
+                        newWork = [...response.data];
                     }
                     if(this.state.topics[i] === "Culture") {
-                        newCulture = response.data;
+                        newCulture = [...response.data];
                     }
                     if(this.state.topics[i] === "Travel") {
-                        newTravel = response.data;
+                        newTravel = [...response.data];
                     }
                 })
                 .catch(error => {
@@ -121,15 +128,13 @@ export default class CardProvider extends Component {
                 });
         }
 
-        this.setState(() => {
-            return {
-                topics: newTopics,
-                cards: newCards,
-                workCards: newWork,
-                travelCards: newTravel,
-                cultureCards: newCulture
-            }
-        })
+        this.setState({
+                topics: [...newTopics],
+                cards: [...newCards],
+                workCards: [...newWork],
+                travelCards: [...newTravel],
+                cultureCards: [...newCulture]
+        });
     }
 
     getCard = (index) => {
@@ -174,15 +179,15 @@ export default class CardProvider extends Component {
         return (
             <CardContext.Provider value={{
                 ...this.state,
-                
-                clearCart: this.clearCart,
-                cards: this.cards,
-                workCards: this.workCards,
-                travelCards: this.travelCards,
-                cultureCards: this.cultureCards,
-                currentLanguage: this.currentLanguage,
-                username : this.username,
-                pwd: this.pwd
+                updateUsername: this.updateUsername,
+                updateCards: this.updateCards,
+                getCard: this.getCard,
+                getCardsLength: this.getCardsLength,
+                updateCard: this.updateCard,
+                incrementEasy: this.incrementEasy,
+                incrementHard: this.incrementHard,
+                switchLanguage: this.switchLanguage,
+                switchTopics: this.switchTopics
             }}>
                 {this.props.children}
             </CardContext.Provider>

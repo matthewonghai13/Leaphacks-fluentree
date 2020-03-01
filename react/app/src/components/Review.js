@@ -12,8 +12,8 @@ import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class Review extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
       this.state = {
       isFlipped: false,
       currentWord: 0
@@ -28,8 +28,7 @@ class Review extends React.Component {
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
   
-  newCard(e) {
-    e.preventDefault();
+  newCard() {
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped, currentWord: prevState.currentWord + 1 }));
   }
   // style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
@@ -39,7 +38,7 @@ class Review extends React.Component {
       <CardConsumer>
       { value => {
         const {getCard, updateCard, cards} = value;
-        const card = getCard(this.state.currentWord);
+        console.log(cards);
         return (
         <ReactCardFlip 
           isFlipped={this.state.isFlipped}
@@ -48,13 +47,13 @@ class Review extends React.Component {
 
           <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
               <Card id="wordCard" border="dark">
-                <Card.Body id="wordFront">{card.front}</Card.Body>
+                <Card.Body id="wordFront">{cards[this.state.currentWord].front}</Card.Body>
               </Card>
           </a>
 
           <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}}>
             <Card id="wordCard" border="dark">
-              <Card.Body id="wordBack">{card.back}</Card.Body>
+              <Card.Body id="wordBack">{cards[this.state.currentWord].back}</Card.Body>
               
         <ListGroup className="list-group-flush" onClick={() => {{/*updateCard(this.state.currentWord);*/} this.newCard();}}>
                 <ListGroup.Item></ListGroup.Item>
