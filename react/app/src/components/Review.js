@@ -34,6 +34,10 @@ class Review extends React.Component {
   // style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
  
   render() {
+    let eng = ["report", "company", "money", "office", "business card"];
+    let foreign = ["reporte", "empresa", "dinero", "oficina", "tarjeta de visita", "Done! Check back later."];
+
+    
     return (
       <CardConsumer>
       { value => {
@@ -47,13 +51,13 @@ class Review extends React.Component {
 
           <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}} onClick={this.handleClick}>
               <Card id="wordCard" border="dark">
-                <Card.Body id="wordFront">{cards[this.state.currentWord].front}</Card.Body>
+                <Card.Body id="wordFront">{foreign[this.state.currentWord]}</Card.Body>
               </Card>
           </a>
 
           <a style={{ cursor: 'pointer', display: "flex", justifyContent: "center", alignItems: "center"}}>
             <Card id="wordCard" border="dark">
-              <Card.Body id="wordBack">{cards[this.state.currentWord].back}</Card.Body>
+              <Card.Body id="wordBack">{eng[this.state.currentWord]}</Card.Body>
               
         <ListGroup className="list-group-flush" onClick={() => {{/*updateCard(this.state.currentWord);*/} this.newCard();}}>
                 <ListGroup.Item></ListGroup.Item>
